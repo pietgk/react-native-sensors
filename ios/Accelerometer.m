@@ -57,7 +57,7 @@ RCT_EXPORT_METHOD(getData:(RCTResponseSenderBlock) cb) {
     double z = self->_motionManager.accelerometerData.acceleration.z;
     double timestamp = self->_motionManager.accelerometerData.timestamp;
 
-    NSLog(@"getData: %f, %f, %f, %f", x, y, z, timestamp);
+    // NSLog(@"getData: %f, %f, %f, %f", x, y, z, timestamp);
 
     cb(@[[NSNull null], @{
                  @"x" : [NSNumber numberWithDouble:x],
@@ -80,7 +80,7 @@ RCT_EXPORT_METHOD(startUpdates) {
          double y = accelerometerData.acceleration.y;
          double z = accelerometerData.acceleration.z;
          double timestamp = accelerometerData.timestamp;
-         NSLog(@"startAccelerometerUpdates: %f, %f, %f, %f", x, y, z, timestamp);
+         // NSLog(@"startAccelerometerUpdates: %f, %f, %f, %f", x, y, z, timestamp);
 
          [self.bridge.eventDispatcher sendDeviceEventWithName:@"Accelerometer" body:@{
                                                                                    @"x" : [NSNumber numberWithDouble:x],
