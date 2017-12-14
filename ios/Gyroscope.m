@@ -94,4 +94,9 @@ RCT_EXPORT_METHOD(stopUpdates) {
     [self->_motionManager stopGyroUpdates];
 }
 
++ (BOOL)requiresMainQueueSetup
+{
+    return YES;
+}
+
 @end
